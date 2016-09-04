@@ -9,10 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let preferences = NSUserDefaults.standardUserDefaults()
+    let myBoolean = "myBoolean"
+    let myDouble = "myDouble"
+    let myString = "myString"
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        preferences.setBool(true, forKey: myBoolean)
+        preferences.setDouble(45.6, forKey: myDouble)
+        preferences.setValue("Hola people", forKey: myString)
+        
+    
+        
     }
 
     override func didReceiveMemoryWarning() {
